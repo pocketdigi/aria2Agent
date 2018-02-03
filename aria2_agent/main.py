@@ -11,6 +11,7 @@ import os
 import argparse
 
 
+
 def get_mac_address():
     node = uuid.getnode()
     mac = uuid.UUID(int=node).hex[-12:]
@@ -49,7 +50,6 @@ def main():
     
     agent = Agent(rpc_host=rpc_host, rpc_port=rpc_port, rpc_secret=rpc_secret, device_id=device_id)
     agent.connect()
-
 
 
 def init_device_id(config_path, cf):

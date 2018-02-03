@@ -4,7 +4,6 @@ import urllib2, json
 
 class Aria2Api(object):
     """调用Aria2接口"""
-    mq_client = None
     
     def __init__(self, ip, port, password):
         self.ip = ip

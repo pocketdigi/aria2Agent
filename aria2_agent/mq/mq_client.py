@@ -7,7 +7,6 @@ import threading
 
 class MQClient(object):
     client = None
-    aria2_api = None
     on_close = None
     
     def __init__(self, device_id):
@@ -23,13 +22,12 @@ class MQClient(object):
         """连接"""
         self.client = mqtt.Client()
         self.client.on_connect = self.on_mq_connect
-        self.client.on_message = self.on_mq_message
         self.client.on_disconnect = self.on_mq_disconnect
         self.client.username_pw_set('aria2', 'aria2')
         
         def run(client, fail_callback):
             try:
-                client.connect("mqtt.pocketdigi.com", 1884, 60)
+                client.connect("mqtt.pocketdigi.com", 1883, 60)
                 client.loop_forever()
             except BaseException, e:
                 print('连接远程服务器失败 %s' % str(e))
@@ -49,15 +47,6 @@ class MQClient(object):
             print "远程服务器连接失败，稍候重试，错误码 %d" % rc
         
         client.subscribe("aria2_read/%s" % self.device_id)
-    
-    def on_mq_message(self, client, userdata, msg):
-        """收到服务器消息"""
-        print(msg.topic + " " + str(msg.payload))
-        msg_obj = json.loads(str(msg.payload))
-        msg_id = msg_obj['msgId']
-        method = msg_obj['method']
-        args = msg_obj['args']
-        self.aria2_api.invoke(msg_id=msg_id, method=method, args=args, callback=self.publish)
     
     def on_mq_disconnect(self, client, userdata, rc):
         """mq断开"""
