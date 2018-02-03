@@ -1,0 +1,30 @@
+INFO:root:开始连接 aria2 rpc ip:127.0.0.1 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+ERROR:websocket:error from callback <bound method Aria2WebSocket.on_ws_close of <aria2_agent.websocket_rpc.aria2_websocket.Aria2WebSocket object at 0x106b1fc90>>: 'NoneType' object is not callable
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+ERROR:websocket:error from callback <bound method Aria2WebSocket.on_ws_close of <aria2_agent.websocket_rpc.aria2_websocket.Aria2WebSocket object at 0x107b66c10>>: 'NoneType' object is not callable
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+ERROR:websocket:error from callback <bound method Aria2WebSocket.on_ws_close of <aria2_agent.websocket_rpc.aria2_websocket.Aria2WebSocket object at 0x111105c10>>: 'NoneType' object is not callable
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+ERROR:websocket:error from callback <bound method Aria2WebSocket.on_ws_close of <aria2_agent.websocket_rpc.aria2_websocket.Aria2WebSocket object at 0x104394c10>>: 'NoneType' object is not callable
+INFO:root:开始连接 aria2 rpc ip:10.211.55.5 端口:6800
+ERROR:websocket:error from callback <bound method Aria2WebSocket.on_ws_close of <aria2_agent.websocket_rpc.aria2_websocket.Aria2WebSocket object at 0x10f4ecc50>>: 'NoneType' object is not callable
+ERROR:websocket:error from callback <bound method Aria2WebSocket.on_ws_close of <aria2_agent.websocket_rpc.aria2_websocket.Aria2WebSocket object at 0x105fb1ed0>>: 'NoneType' object has no attribute 'close'
+ERROR:websocket:error from callback <bound method Aria2WebSocket.on_ws_close of <aria2_agent.websocket_rpc.aria2_websocket.Aria2WebSocket object at 0x10de40ed0>>: 'NoneType' object has no attribute 'close'
