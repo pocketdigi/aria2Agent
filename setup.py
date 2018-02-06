@@ -6,6 +6,7 @@ setup(
     version='0.0.1.4',
     description='aria2 agent',
     author='Exception',
+    url='https://github.com/pocketdigi/aria2Agent',
     author_email='webmaster@pocketdigi.com',
     license='MIT',
     platforms="any",

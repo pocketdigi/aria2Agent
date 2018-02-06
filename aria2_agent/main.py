@@ -44,7 +44,7 @@ def main():
     except (ConfigParser.NoOptionError, ConfigParser.NoSectionError):
         device_id = init_device_id(config_path, cf)
     
-    print(rpc_host, rpc_port, device_id)
+    print('当前设备id: %s' % device_id)
     
     logging.basicConfig(filename='log.log', level=logging.INFO)
     

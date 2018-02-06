@@ -3,3 +3,5 @@
 **/.idea/
 **/logs/
 **/dist/
+**/aria2Agent.egg-info/
+**/**/*.pyc

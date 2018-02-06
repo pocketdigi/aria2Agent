@@ -21,7 +21,7 @@ class Agent(object):
         self.mq_client.on_close = self.close
         self.mq_client.on_mq_message = self.on_mq_message
         
-        self.aria2_api = Aria2Api(self.rpc_host, self.rpc_port, self.rpc_secret)
+        self.aria2_api = Aria2Api(self.rpc_host, self.rpc_port, self.rpc_secret, device_id)
         self.aria2_websocket = Aria2WebSocket(self.rpc_host, self.rpc_port, self.rpc_secret, self.device_id)
         self.aria2_websocket.on_close = self.close
         self.aria2_websocket.on_message = self.on_websocket_message
@@ -44,7 +44,10 @@ class Agent(object):
     def on_mq_message(self, client, userdata, msg):
         """收到服务器消息"""
         msg_obj = json.loads(str(msg.payload))
+        print("收到远程指令: %s" % msg_obj)
         msg_id = msg_obj['msgId']
         method = msg_obj['method']
-        args = msg_obj['args']
+        args = None
+        if msg_obj.has_key('args'):
+            args = msg_obj['args']
         self.aria2_api.invoke(msg_id=msg_id, method=method, args=args, callback=self.mq_client.publish)
